@@ -1,14 +1,19 @@
 const express = require("express");
 const app = express();
+const path = require("path");
 const textToImage = require("text-to-image");
 const cors = require("cors");
 const colorsys = require("colorsys");
 
 const PORT = process.env.PORT || 3001;
 
+//new stuff
+app.use(express.static(path.join(__dirname, "client/build")));
+//end of new stuff
+
 app.use(cors());
 
-app.get("/", function (req, res) {
+app.get("/api", function (req, res) {
   const rgb = colorsys.hsv_to_rgb({
     h: req.query.hue,
     s: req.query.saturation,
@@ -34,6 +39,12 @@ app.get("/", function (req, res) {
       res.send({ image: dataUri });
     });
 });
+
+//new stuff
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname + "/client/build/index.html"));
+});
+//end of new stuff
 
 app.listen(PORT, () => {
   console.log(`app listening on port ${PORT}`);

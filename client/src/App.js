@@ -14,7 +14,7 @@ function App() {
 
   useEffect(() => {
     fetch(
-      `http://localhost:3001/?text=${text}&hue=${colour.hue}&brightness=${
+      `http://localhost:3001/api/?text=${text}&hue=${colour.hue}&brightness=${
         colour.brightness * 100
       }&saturation=${colour.saturation * 100}&alpha=${
         colour.alpha
@@ -43,7 +43,12 @@ function App() {
         <ColorPicker onChange={setColour} color={colour} allowAlpha={true} />
       </div>
       <img src={image} alt="quote" />
-      <div className="footer">Github repo: </div>
+      <br />
+      <div className="footer">
+        <a href="https://github.com/Code-Kat/AppAttic-code-challenge">
+          Github repo
+        </a>
+      </div>
     </div>
   );
 }

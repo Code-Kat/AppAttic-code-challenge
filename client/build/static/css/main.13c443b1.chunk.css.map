@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/App.css"],"names":[],"mappings":"AAAA,KACE,iBACF,CAEA,WACE,eAEF,CAEA,wBAHE,mBAKF,CAEA,QACE,gBACF","file":"main.13c443b1.chunk.css","sourcesContent":[".app {\n  padding: 32px 38px;\n}\n\n.textInput {\n  max-width: 660px;\n  padding-bottom: 30px;\n}\n\n.colorPicker {\n  padding-bottom: 30px;\n}\n\n.footer {\n  padding-top: 50px;\n}\n"]}
