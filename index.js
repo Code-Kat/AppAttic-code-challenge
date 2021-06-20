@@ -5,6 +5,8 @@ const textToImage = require("text-to-image");
 const cors = require("cors");
 const colorsys = require("colorsys");
 
+const PORT = process.env.PORT || 3001;
+
 app.use(express.static(path.join(__dirname, "client/build")));
 
 app.use(cors());
@@ -36,6 +38,10 @@ app.get("/api", function (req, res) {
     });
 });
 
-app.get("/", (req, res) => {
+app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname + "/client/build/index.html"));
+});
+
+app.listen(PORT, () => {
+  console.log(`app listening on port ${PORT}`);
 });
