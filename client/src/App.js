@@ -14,7 +14,7 @@ function App() {
 
   useEffect(() => {
     fetch(
-      `http://localhost:3001/api/?text=${text}&hue=${colour.hue}&brightness=${
+      `/api/?text=${text}&hue=${colour.hue}&brightness=${
         colour.brightness * 100
       }&saturation=${colour.saturation * 100}&alpha=${
         colour.alpha
