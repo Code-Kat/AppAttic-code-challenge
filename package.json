@@ -1,0 +1,17 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "colorsys": "^1.0.22",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "text-to-image": "^4.0.0"
+  }
+}
